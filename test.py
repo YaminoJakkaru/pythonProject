@@ -14,7 +14,7 @@ x = SimpleImputer().fit_transform(df[['T_mean_10km']].values)
 
 y = df['All_0_100'].values
 
-o
+
 lams=np.logspace(x.min(), x.max(), 100)
 gam = LinearGAM(n_splines=50).gridsearch(x, y,lam=lams)
 xx = np.linspace(x.min(), x.max(), 100)
